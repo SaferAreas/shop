@@ -1,110 +1,131 @@
-<doctype html>
-    <head>
-<style>
-body {
-    margin: 0px;
-    padding: 0px;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    footer {
-        background-color: gray;
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    .navbar {
-  background-color: gray;
-}
+        header {
+            background-color: gray;
+            padding: 20px;
+            text-align: center;
+        }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+        nav {
+            background-color: gray;
+            text-align: center;
+        }
 
-.navbar li {
-  display: inline-block;
-}
-a {
- 
-  color: white;
-  text-decoration: none;}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar li a {
-  display: block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;}
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
 
-  .top-img-img {
-background-image: url(cctv-camera.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-background-position-y: -250px;
-margin: 30px;
+        nav a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
 
-padding: 80px;
-  }
-.Items {
-text-align: center;
-}
+        .top-img {
+            position: relative;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-.product {
-text-align: center;
-background-color: gray;
-margin: 0px 599px;
-}
+        .top-img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 10px solid white;
+            z-index: -1;
+        }
 
-</style>
-    </head>
-    <body>
-        <nav class="navbar">
-            <ul>
-                <li><a href="https://saferareas.co.uk"><p>Main Site (UK)</p></a></li>
-                <li><a href="index.html"><p>Online Shop (UK)</p></a></li>
-                <li><a href="wholesale/contact.html"><p>Wholesale (UK)</p></a></li>
-            </ul>
-        </nav>
-<header>
-    
-</header>
-<div class="contact-1">
-<div class="top-img-boader">
-    
-    <div class="top-img-img">
-        <br>
-    <br>
-    <br>
-    <br>
+        .top-img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .items {
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            background-color: lightgray;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+        }
+
+        footer {
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Safer Areas</h1>
+        <p>Store</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://saferareas.co.uk">Main Site (UK)</a></li>
+            <li><a href="index.html">Online Shop (UK)</a></li>
+            <li><a href="wholesale/contact.html">Wholesale (UK)</a></li>
+        </ul>
+    </nav>
+    <div class="top-img">
+        <img src="cctv-camera.jpg" alt="Background Image">
     </div>
-    <div class="Items">
+    <div class="items">
         <h1>Products</h1>
-        <a href="https://py.pl/1LEFb7">
-<div class="product">
-    <img src="ezgif-2-28dbcae5d3.jpg" width="150" height="150">
-    <h2>EasyHome Wifi 1</h2>
-    <p>Wifi<br>Two way talk<br>night vision
-    </p></a>
-    <br>
-</div>
-<br>
-<a href="outofstock.html">
-<div class="product">
-    <img src="3MP-Wifi-Wireless-IP-Camera-Security-Protection-Surveillance-Cameras-Baby-Monitor-Automatic-Motion-Tracking-Two-way.jpg_640x640.jpg" width="150" height="150">
-    <h2>EasyHome PTZ 1</h2>
-    <p>PTZ<br>Two way talk<br>night vision</p></a>
-    <br>
-</div>
-<br><br>
-
+        <div class="product">
+            <a href="https://py.pl/1LEFb7">
+                <img src="ezgif-2-28dbcae5d3.jpg" alt="Product 1">
+                <h2>EasyHome Wifi 1</h2>
+                <p>Wifi<br>Two-way talk<br>Night vision</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="https://py.pl/8fB6lz6G8dn">
+                <img src="3MP-Wifi-Wireless-IP-Camera-Security-Protection-Surveillance-Cameras-Baby-Monitor-Automatic-Motion-Tracking-Two-way.jpg_640x640.jpg" alt="Product 2">
+                <h2>EasyHome PTZ 1</h2>
+                <p>PTZ<br>Two-way talk<br>Night vision</p>
+            </a>
+        </div>
     </div>
-</div>
-
-</div>
-<footer>
-<p><b>Safer Areas 2023</b></p>
-</footer>
+    <footer>
+        <p><strong>Safer Areas 2023</strong></p>
+    </footer>
 </body>
-</doctype>
+</html>
