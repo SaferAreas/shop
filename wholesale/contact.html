@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: gray;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: gray;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top-img {
+            position: relative;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .top-img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 10px solid white;
+            z-index: -1;
+        }
+
+        .top-img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .items {
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            background-color: lightgray;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+        }
+
+        footer {
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            header {
+                padding: 10px;
+            }
+
+            nav {
+                padding: 10px;
+            }
+
+            .product {
+                width: 80%;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Safer Areas</h1>
+        <p>Store</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://saferareas.co.uk">Main Site (UK)</a></li>
+            <li><a href="../index.html">Online Shop (UK)</a></li>
+            <li><a href="wholesale/contact.html">Wholesale (UK)</a></li>
+        </ul>
+    </nav>
+    <div class="top-img">
+        
+    </div>
+    <div class="items">
+        <h1>Ways To Apply To Wholesale</h1>
+        <p>please email: wholesale.apply@saferareas.co.uk to apply</p>
+        <p></p>
+        <div class="product">
+            <a href="mailto:wholesale.apply@saferareas.co.uk">
+                
+                <h2>Email</h2>
+                <p>wholesale.apply@saferareas.co.uk</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="https://wholesale.saferareas.co.uk/applyform.pdf">
+                
+                <h2>Form</h2>
+                <p>https://wholesale.saferareas.co.uk/applyform.pdf</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="items">
+        <br><br>
+        <h1>Alredy a Wholesale Customer?</h1>
+        <div class="product">
+            <a href="mailto:wholesale.shop@saferareas.co.uk">
+                <h2 style="font-size: 20px;">Email</h2>
+                <p>wholesale.shop@saferareas.co.uk</p>
+                <p>with the email used to apply for wholesale</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="https://wholesale.saferareas.co.uk">
+                
+                <h2 style="font-size: 20px;">Online</h2>
+                <p>wholesale.saferareas.co.uk</p><br>
+                <p></p>
+            </a>
+        </div>
+
+        
+
+        <br><br>
+</div>
+
+    <footer>
+        <p><strong>Safer Areas 2023</strong></p>
+    </footer>
+</body>
+</html>
