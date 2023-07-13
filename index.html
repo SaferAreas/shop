@@ -1,225 +1,238 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Safer Areas Shop</title>
+  <title>Online Store</title>
   <style>
-    body {
-        text-align: center;
-    }
-    /* CSS for dropdown menu */
-    .dropdown {
-        text-align: center;
-        align-content: center;
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      text-align: center;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 160px;
-      z-index: 1;
-      background-color: #fff; /* Add white background */
-      border: 1px solid #ccc;
-      padding: 10px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
-
-    .dropdown-content a {
-      display: block;
-      text-align: center;
-      padding: 8px 0;
-      transition: background-color 0.3s ease; /* Add transition effect */
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd; /* Darken the background on hover */
-      text-align: center;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-      text-align: center;
-    }
-
-    /* CSS for item container */
-    #item-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .item {
-      width: calc(33.33% - 20px);
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .item h3 {
-      margin-top: 0;
-    }
-
-    /* CSS for shop layout */
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset some default styles */
+    body, ul {
       margin: 0;
-      padding: 20px;
-      background-color: #f5f5f5;
+      padding: 0;
     }
-
-    h1 {
-      text-align: center;
-    }
-
+    
+    /* Basic layout */
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 20px;
     }
-
-    #welcome-message {
-      display: block;
-      text-align: center;
-      font-size: 24px;
+    
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    header h1 {
+      margin: 0;
+    }
+    
+    /* Navigation */
+    nav {
+      margin-top: 20px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+    
+    /* Product card */
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    
+    .product-card img {
+      max-width: 100%;
+    }
+    
+    .product-card h3 {
+      margin-top: 10px;
+    }
+    
+    .product-card p {
+      font-size: 14px;
+    }
+    
+    .product-card button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Filters and sorting */
+    .filters {
       margin-bottom: 20px;
+    }
+    
+    .filters select, .filters button {
+      margin-right: 10px;
+    }
+    
+    /* Range Slider */
+    .range-slider {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .range-slider input[type="number"] {
+      width: 80px;
+      margin-left: 10px;
+    }
+    
+    .range-slider p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Safer Areas Shop</h1>
-
-    <!-- Welcome message -->
-    <p id="welcome-message">Welcome to Safer Areas Shop!</p>
-
-    <!-- Dropdown menu -->
-    <div class="dropdown">
-      <button class="dropbtn">Categories</button>
-      <div class="dropdown-content">
-        <a href="#" onclick="loadItems('cameras')">CCTV Cameras</a>
-        <a href="#" onclick="loadItems('saferareas')">Safer Areas</a>
-        <a href="#" onclick="loadItems('hikvision')">Hikvision</a>
-      </div>
-    </div>
-
-    <!-- Container to display items -->
-    <div id="item-container"></div>
-  </div>
-
-  <script>
-
-// JavaScript to load items based on selected category
-var isAscending = true; // Flag to track the sorting order
-
-function loadItems(category) {
-  var itemContainer = document.getElementById('item-container');
-  itemContainer.innerHTML = ''; // Clear previous items
-
-  // Hide the welcome message
-  var welcomeMessage = document.getElementById('welcome-message');
-  welcomeMessage.style.display = 'none';
-
-  // Simulating item data for demonstration
-  var items = [
+    <header>
+      <h1>Online Store</h1>
+    </header>
     
-    { name: 'Safer Areas EasyHome Wifi 1', price: 35, image: 'camera1.jpg', category: 'saferareas', link: 'item1.html' },
-    { name: 'Safer Areas EasyHome PTZ 1', price: 30, image: 'safe-camera2.jpg', category: 'saferareas', link: 'item2.html' },
-    { name: 'Safer Areas EasyHome PTZ 2', price: 42, image: 'safe-camera3.jpg', category: 'saferareas', link: 'item3.html' },
-    { name: 'Safer Areas DIY 1 (2.8 - 2mm lens)', price: 51, image: 'safe-camera4.jpg', category: 'saferareas', link: 'item4.html' },
-    { name: 'Safer Areas DIY 1 (16mm)', price: 56, image: 'safe-camera5.jpg', category: 'saferareas', link: 'item5.html' },
-    { name: 'Safer Areas DIY 1 (1.7mm)', price: 64, image: 'safe-camera6.jpg', category: 'saferareas', link: 'item6.html' },
-    { name: 'Safer Areas DIY 1 (2.1mm)', price: 68, image: 'safe-camera7.jpg', category: 'saferareas', link: 'item7.html' },
-    { name: 'Safer Areas EasyHome Light Bulb 1', price: 73, image: 'safe-camera8.jpg', category: 'saferareas', link: 'item8.html' },
-    { name: 'Safer Areas EasyHome Outdoors 1', price: 76, image: 'safe-camera9.jpg', category: 'saferareas', link: 'item9.html' },
-    { name: 'Hikvision DS-KD8003-IME1(B)', price: 97, image: 'camera3.jpg', category: 'hikvision', link: 'item10.html' },
-    { name: 'Hikvision DS-2CD2083G2-IU', price: 119, image: 'camera4.jpg', category: 'hikvision', link: 'item11.html' },
-    { name: 'Hikvision DS-2CD2183G2-IU', price: 120, image: 'camera5.jpg', category: 'hikvision', link: 'item12.html' },
-    { name: 'Hikvision DS-2CD2955FWD-IS', price: 130, image: 'camera6.jpg', category: 'hikvision', link: 'item13.html' },
-    { name: 'Hikvision DS-2CD2347G2-LSU/SL', price: 132, image: 'camera7.jpg', category: 'hikvision', link: 'item14.html' },
-    { name: 'Hikvision DS-2CD1T43G0-I', price: 80, image: 'camera8.jpg', category: 'hikvision', link: 'item15.html' },
-    // Add the remaining items here...
-    { name: 'Safer Areas EasyHome Wifi 1', price: 35, image: 'camera1.jpg', category: 'cameras', link: 'item1.html' },
-    { name: 'Safer Areas EasyHome PTZ 1', price: 30, image: 'safe-camera2.jpg', category: 'cameras', link: 'item2.html' },
-    { name: 'Safer Areas EasyHome PTZ 2', price: 42, image: 'safe-camera3.jpg', category: 'cameras', link: 'item3.html' },
-    { name: 'Safer Areas DIY 1 (2.8 - 2mm lens)', price: 51, image: 'safe-camera4.jpg', category: 'cameras', link: 'item4.html' },
-    { name: 'Safer Areas DIY 1 (16mm)', price: 56, image: 'safe-camera5.jpg', category: 'cameras', link: 'item5.html' },
-    { name: 'Safer Areas DIY 1 (1.7mm)', price: 64, image: 'safe-camera6.jpg', category: 'cameras', link: 'item6.html' },
-    { name: 'Safer Areas DIY 1 (2.1mm)', price: 68, image: 'safe-camera7.jpg', category: 'cameras', link: 'item7.html' },
-    { name: 'Safer Areas EasyHome Light Bulb 1', price: 73, image: 'safe-camera8.jpg', category: 'cameras', link: 'item8.html' },
-    { name: 'Safer Areas EasyHome Outdoors 1', price: 76, image: 'safe-camera9.jpg', category: 'cameras', link: 'item9.html' },
-    { name: 'Hikvision DS-KD8003-IME1(B)', price: 97, image: 'camera3.jpg', category: 'cameras', link: 'item10.html' },
-    { name: 'Hikvision DS-2CD2083G2-IU', price: 119, image: 'camera4.jpg', category: 'cameras', link: 'item11.html' },
-    { name: 'Hikvision DS-2CD2183G2-IU', price: 120, image: 'camera5.jpg', category: 'cameras', link: 'item12.html' },
-    { name: 'Hikvision DS-2CD2955FWD-IS', price: 130, image: 'camera6.jpg', category: 'cameras', link: 'item13.html' },
-    { name: 'Hikvision DS-2CD2347G2-LSU/SL', price: 132, image: 'camera7.jpg', category: 'cameras', link: 'item14.html' },
-    { name: 'Hikvision DS-2CD1T43G0-I', price: 80, image: 'camera8.jpg', category: 'cameras', link: 'item15.html' },
-  ];
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
-  // Filter items based on category
-  if (category !== 'all') {
-    items = items.filter(function(item) {
-      return item.category === category;
+    <div class="filters">
+      <select id="band-filter">
+        <option value="all">All Brands</option>
+        <option value="hikvision">Hikvision</option>
+        <option value="other">Other</option>
+        <option value="blueiris">Blue Iris</option>
+      </select>
+      <select id="type-filter">
+        <option value="all">All Types</option>
+        <option value="cctv">CCTV</option>
+        <option value="intercom">Intercom</option>
+        <option value="software">software</option>
+      </select>
+    </div>
+    
+    <div class="range-slider">
+      <input type="number" id="min-price" min="0" max="9999" placeholder="Min Price" value="0">
+      <p>-</p>
+      <input type="number" id="max-price" min="0" max="9999" placeholder="Max Price" value="9999">
+    </div>
+    
+    <div class="product-grid">
+      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="50">
+        <a href="hikvision-ds-kv6113-wpe1.html">
+          <img src="https://ae01.alicdn.com/kf/S8f3b65f5a3e8437685c5e924c9123714o/Original-Hikvision-2MP-DS-KV6113-WPE1-Wireless-WIFI-Standard-POE-HD-Video-Intercom-Plastic-Villa-Door.jpg_640x640.jpg" alt="Product 1">
+          <h3>hikvision DS-KV6113-WPE1</h3>
+          <p>Price: £150</p>
+        </a>
+        <button>Buy Now</button>
+      </div>
+      
+      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="30">
+        <a href="hikvision-ds-kis603-p.html">
+          <img src="https://ae01.alicdn.com/kf/S81c5812f8685447fb8c6308feb64d388z/Hikvision-DS-KIS603-P-IP-Video-Intercom-Kit-DS-KV6113-WPE1-DS-KH6320-WTE1-Standard-POE.jpg_640x640.jpg" alt="Product 2">
+          <h3>hikvision DS-KIS603-P (KIT)</h3>
+          <p>Price: £260</p>
+        </a>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="30">
+        <a href="hikvision-ds-kis604-p.html">
+          <img src="https://ae01.alicdn.com/kf/S6e591a9ec8c246f59c9ed179406d665c5/Hikvision-DS-KIS604-P-C-Video-Intercom-Kit-DS-KV8113-WME1-C-DS-KH6320-WTE1-Standard.jpg_Q90.jpg_.webp" alt="Product 3">
+          <h3>Hikvision DS-KIS604-P</h3>
+          <p>Price: £320</p>
+        </a>
+        <button>Buy Now</button>
+
+
+      </div>
+
+      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="30">
+        <a href="hikvision-ds-kis603-p-blueiris.html">
+          <img src="bik.png" alt="Product 2">
+          <h3>hikvision DS-KIS603-P & Blue Iris</h3>
+          <p>Price: £295</p>
+        </a>
+        <button>Buy Now</button>
+      </div>
+
+    </div>
+  </div>
+  
+  <script>
+    const bandFilter = document.getElementById('band-filter');
+    const typeFilter = document.getElementById('type-filter');
+    const minPriceInput = document.getElementById('min-price');
+    const maxPriceInput = document.getElementById('max-price');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    bandFilter.addEventListener('change', () => {
+      const selectedBand = bandFilter.value;
+      filterProducts(selectedBand, typeFilter.value, getSelectedPriceRange());
     });
-  }
-
-  // Display items
-  if (items.length > 0) {
-    items.forEach(function(item) {
-      var itemElement = document.createElement('div');
-      itemElement.classList.add('item');
-
-      var itemLink = document.createElement('a');
-      itemLink.href = item.link;
-      itemLink.style.display = 'block';
-      itemLink.style.textDecoration = 'none';
-
-      var itemImage = document.createElement('img');
-      itemImage.src = item.image;
-      itemImage.alt = item.name;
-      itemImage.style.width = '150px';
-
-      var itemName = document.createElement('h3');
-      itemName.textContent = item.name;
-
-      var itemPrice = document.createElement('p');
-      itemPrice.textContent = 'Price: £' + item.price.toFixed(2);
-
-      itemLink.appendChild(itemImage);
-      itemLink.appendChild(itemName);
-      itemLink.appendChild(itemPrice);
-      itemElement.appendChild(itemLink);
-
-      itemContainer.appendChild(itemElement);
+    
+    typeFilter.addEventListener('change', () => {
+      const selectedType = typeFilter.value;
+      filterProducts(bandFilter.value, selectedType, getSelectedPriceRange());
     });
-  } else {
-    var noItemElement = document.createElement('p');
-    noItemElement.innerText = 'No items found.';
-    itemContainer.appendChild(noItemElement);
-  }
-}
-
-// Toggle switch to change sorting order
-function toggleSortingOrder() {
-  isAscending = !isAscending;
-  loadItems('all');
-}
-
-// Display welcome message on page load
-window.onload = function() {
-  var welcomeMessage = document.getElementById('welcome-message');
-  welcomeMessage.style.display = 'block';
-
-  // Clear the item container
-  var itemContainer = document.getElementById('item-container');
-  itemContainer.innerHTML = '';
-};
-
-// Initial load
-loadItems('all');
+    
+    minPriceInput.addEventListener('input', () => {
+      const priceRange = getSelectedPriceRange();
+      filterProducts(bandFilter.value, typeFilter.value, priceRange);
+    });
+    
+    maxPriceInput.addEventListener('input', () => {
+      const priceRange = getSelectedPriceRange();
+      filterProducts(bandFilter.value, typeFilter.value, priceRange);
+    });
+    
+    function filterProducts(band, type, priceRange) {
+      productCards.forEach((card) => {
+        const cardBand = card.getAttribute('data-band');
+        const cardType = card.getAttribute('data-type');
+        const cardPrice = parseInt(card.getAttribute('data-price'));
+        
+        const isVisible =
+          (band === 'all' || cardBand === band) &&
+          (type === 'all' || cardType === type) &&
+          (cardPrice >= priceRange.min && cardPrice <= priceRange.max);
+        
+        card.style.display = isVisible ? 'block' : 'none';
+      });
+    }
+    
+    function getSelectedPriceRange() {
+      const minPrice = parseInt(minPriceInput.value);
+      const maxPrice = parseInt(maxPriceInput.value);
+      return { min: minPrice, max: maxPrice };
+    }
   </script>
 </body>
 </html>
