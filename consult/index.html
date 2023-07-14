@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safer Areas Consulting</title>
+  <style>
+    /* CSS styles go here */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #999;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container1 {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      background-image: url("pp1.png");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #000000;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      color: #000000;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .feature {
+      width: calc(100.00% - 20px);
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+      display: none;
+    }
+
+    .popup.active {
+      display: block;
+    }
+
+    .popup-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .popup-close {
+      font-size: 20px;
+      color: #999;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Safer Areas Consulting</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to Safer Areas Consulting</h1>
+        <p>Call us at Tel: <b>0208 194 2455</b></p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container1">
+        <div class="feature">
+          <h2>Expert Advice</h2>
+          <p>Get professional advice on the best security solutions tailored to your needs.</p>
+        </div>
+        <div class="feature">
+          <h2>Customized Solutions</h2>
+          <p>We design and install bespoke security systems to safeguard your premises.</p>
+        </div>
+        <div class="feature">
+          <h2>Extensive Product Range</h2>
+          <p>Discover a wide selection of top-quality security products for all your requirements.</p>
+        </div>
+        <br>
+        <br>
+        <h2>Contact Us</h2>
+        <br>
+        <div class="feature">
+            <h2>Phone</h2>
+            <p>0208 194 2455</p>
+          </div>
+          <div class="feature">
+            <h2>E-mail</h2>
+            <p>consult@safeareas.co.uk</p>
+          </div>
+          <div class="feature">
+            <h2>Callback</h2>
+            <p><a href="https://forms.gle/ZU6KarwbXiHxk1Xt5">Request a callback by clicking here</a><br>Phone number may display as 0208 159 1192</p>
+          </div>
+        
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Safer Areas Consulting. All rights reserved.</p>
+  </footer>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <p>Hello!</p>
+      <span class="popup-close" onclick="closePopup()">X</span>
+    </div>
+  </div>
+
+  <script>
+    // Open the pop-up box
+    function openPopup() {
+      var popup = document.getElementById("popup");
+      popup.classList.add("active");
+    }
+
+    // Close the pop-up box
+    function closePopup() {
+      var popup = document.getElementById("popup");
+      popup.classList.remove("active");
+    }
+  </script>
+</body>
+
+</html>
+</body>
+
+
+</html>
