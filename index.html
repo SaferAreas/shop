@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Store</title>
   <style>
     /* Reset some default styles */
@@ -127,14 +129,14 @@
       <select id="band-filter">
         <option value="all">All Brands</option>
         <option value="hikvision">Hikvision</option>
-        <option value="other">Other</option>
-        <option value="blueiris">Blue Iris</option>
+        <!-- Add more brand options as needed -->
       </select>
       <select id="type-filter">
         <option value="all">All Types</option>
         <option value="cctv">CCTV</option>
         <option value="intercom">Intercom</option>
-        <option value="software">software</option>
+        <option value="software">Software</option>
+        <!-- Add more type options as needed -->
       </select>
     </div>
     
@@ -145,44 +147,15 @@
     </div>
     
     <div class="product-grid">
-      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="50">
-        <a href="hikvision-ds-kv6113-wpe1.html">
-          <img src="https://ae01.alicdn.com/kf/S8f3b65f5a3e8437685c5e924c9123714o/Original-Hikvision-2MP-DS-KV6113-WPE1-Wireless-WIFI-Standard-POE-HD-Video-Intercom-Plastic-Villa-Door.jpg_640x640.jpg" alt="Product 1">
-          <h3>hikvision DS-KV6113-WPE1</h3>
-          <p>Price: £150</p>
+      <!-- Product Card for Hikvision DS-2DE2A404IW-DE3/W -->
+      <div class="product-card" data-band="hikvision" data-type="cctv" data-price="110">
+        <a href="Hikvision-DS-2DE2A404IW-DE3-W.html" target="_blank">
+          <img src="https://ae01.alicdn.com/kf/Sdfeeb48c2a9c49d397c9ac783cddeb6aJ/HIKVISION-Original-WiFi-PTZ-IP-Camera-DS-2DE2A404IW-DE3-W-2-8-12mm-Mic-IR20m-4X.jpg_.webp" alt="Hikvision DS-2DE2A404IW-DE3/W">
+          <h3>Hikvision DS-2DE2A404IW-DE3/W</h3>
+          <p>Price: £110</p>
         </a>
         <button>Buy Now</button>
       </div>
-      
-      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="30">
-        <a href="hikvision-ds-kis603-p.html">
-          <img src="https://ae01.alicdn.com/kf/S81c5812f8685447fb8c6308feb64d388z/Hikvision-DS-KIS603-P-IP-Video-Intercom-Kit-DS-KV6113-WPE1-DS-KH6320-WTE1-Standard-POE.jpg_640x640.jpg" alt="Product 2">
-          <h3>hikvision DS-KIS603-P (KIT)</h3>
-          <p>Price: £260</p>
-        </a>
-        <button>Buy Now</button>
-      </div>
-
-      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="30">
-        <a href="hikvision-ds-kis604-p.html">
-          <img src="https://ae01.alicdn.com/kf/S6e591a9ec8c246f59c9ed179406d665c5/Hikvision-DS-KIS604-P-C-Video-Intercom-Kit-DS-KV8113-WME1-C-DS-KH6320-WTE1-Standard.jpg_Q90.jpg_.webp" alt="Product 3">
-          <h3>Hikvision DS-KIS604-P</h3>
-          <p>Price: £320</p>
-        </a>
-        <button>Buy Now</button>
-
-
-      </div>
-
-      <div class="product-card" data-band="hikvision" data-type="intercom" data-price="30">
-        <a href="hikvision-ds-kis603-p-blueiris.html">
-          <img src="bik.png" alt="Product 2">
-          <h3>hikvision DS-KIS603-P & Blue Iris</h3>
-          <p>Price: £295</p>
-        </a>
-        <button>Buy Now</button>
-      </div>
-
     </div>
   </div>
   
