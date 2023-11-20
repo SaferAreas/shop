@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7653006835862394"
-     crossorigin="anonymous"></script>
-   
-   <!-- Meta tags for character set and viewport -->
+  <!-- Meta tags for character set and viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,8 +19,63 @@
 
   <!-- Canonical URL to specify the preferred version of the page -->
   <link rel="canonical" href="https://shop.saferareas.co.uk/">
-</head>
-<style>
+
+  <!-- SEO and Open Graph Protocol -->
+  <meta name="keywords" content="security products, CCTV cameras, intercoms, software, online store">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Online Store - Quality Security Products">
+  <meta property="og:url" content="https://shop.saferareas.co.uk/">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://shop.saferareas.co.uk/">
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <!-- Cookie consent script -->
+  <script>
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    function acceptCookies() {
+      setCookie("cookieConsent", "accepted", 365);
+      hideCookieBanner();
+    }
+
+    function hideCookieBanner() {
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    window.onload = function () {
+      if (getCookie("cookieConsent") !== "accepted") {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+    };
+  </script>
+
+  <!-- Google AdSense script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+
+  <style>
     /* Reset some default styles */
     body, ul {
       margin: 0;
@@ -129,19 +180,16 @@
       margin: 0;
     }
   </style>
-  <!-- SEO and Open Graph Protocol -->
-  <meta name="keywords" content="security products, CCTV cameras, intercoms, software, online store">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Online Store - Quality Security Products">
-  <meta property="og:url" content="https://shop.saferareas.co.uk/">
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://shop.saferareas.co.uk/">
-  <!-- Sitemap -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </head>
 <body>
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #f0f0f0; padding: 10px; text-align: center;">
+
+    <p>This website uses cookies to enhance the user experience. By using this site, you agree to our <a href="cookie-policy.html">cookie policy</a>.</p>
+
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
+
   <div class="container">
     <header>
       <h1>Online Store</h1> 
@@ -151,8 +199,8 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
       </ul>
     </nav>
 
@@ -179,14 +227,25 @@
     
     <div class="product-grid">
       <!-- Product Card for Hikvision DS-2DE2A404IW-DE3/W -->
-      <div class="product-card" data-band="hikvision" data-type="cctv" data-price="150">
+      <div class="product-card" data-band="hikvision" data-type="cctv" data-price="110">
         <a href="Hikvision-ds-2de2a404iw-de3-w.html">
           <img src="https://ae01.alicdn.com/kf/S347a6fa181b14db2aaffd27790fbf895Q/HIKVISION-Original-WiFi-PTZ-IP-Camera-DS-2DE2A404IW-DE3-W-2-8-12mm-Mic-IR20m-4X.jpg_.webp" alt="Hikvision DS-2DE2A404IW-DE3/W CCTV Camera">
-          <h3>Hikvision DS-2DE2A404IW-DE3</h3>
+          <h3>Hikvision DS-2DE2A404IW-DE3/W</h3>
           <p>Price: £150</p>
           <button>Buy Now</button>
         </a>
       </div>
+
+      <!-- Product Card for Safer Areas Sign -->
+      <div class="product-card" data-band="hikvision" data-type="cctv" data-price="1">
+        <a href="SaferAreas-Sign01pdf.html">
+          <img src="">
+          <h3>Safer Areas CCTV Sign</h3>
+          <p>Price: £1</p>
+          <button>Buy Now</button>
+        </a>
+      </div>
+
     </div>
   </div>
   <!--Start of Tawk.to Script-->
